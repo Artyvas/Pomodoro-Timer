@@ -21,7 +21,7 @@
         <ul>
           <tasks
           v-for="task in tasks"
-          :key="friends.id"
+          :key="task.id"
           :id="task.id"
           :name="task.name"
           :estPom="task.estPom"
@@ -35,24 +35,21 @@
 </template>
 
 <script>
-import Tasks from './components/Tasks.vue';
 export default {
-  components: { Tasks },
   data() {
     return {
       tasks: [{
-        id: new Date().toISOString(),
+        id: "first",
         name: 'Finish Vue App',
-        estPom: 1,
+        estPom: 9,
         isActive: false
         },
         {
-        id: new Date().toISOString(),
+        id: "second",
         name: 'Eat some tasty food',
         estPom: 1,
         isActive: false
         },
-      
       ],
       timer: null,
       resetTimer: false,
