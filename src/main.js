@@ -2,10 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import Tasks from "./components/Tasks.vue"
+import NewTask from './components/NewTask.vue'
 
 
 Vue.config.productionTip = false;
 Vue.component('tasks', Tasks)
+Vue.component('new-task', NewTask)
 
 new Vue({
   router,

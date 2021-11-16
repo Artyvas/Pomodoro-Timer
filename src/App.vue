@@ -28,6 +28,7 @@
           :isActive="task.isActive"
           ></tasks>
         </ul>
+        <new-task></new-task>
       </div>
     </div>
 
