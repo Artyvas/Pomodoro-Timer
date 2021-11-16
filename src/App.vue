@@ -28,7 +28,7 @@
           :isActive="task.isActive"
           ></tasks>
         </ul>
-        <new-task></new-task>
+        <new-task @add-task="addTask"></new-task>
       </div>
     </div>
 
@@ -84,7 +84,16 @@ export default {
     stopTimer() {
       this.paused = true;
       clearInterval(this.timer)
-    }
+    },
+    addTask(name, poms) {
+      const newTask = {
+        id: new Date().toISOString(),
+        name: name,
+        estPom: poms,
+        isActive: false
+      };
+      this.tasks.push(newTask)
+    }    
   }
 }
 
