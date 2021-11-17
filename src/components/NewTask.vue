@@ -1,6 +1,8 @@
 <template>
   <div>
+    <div class="portfolio-item-caption-content text-center text-white">
     <button @click="isVisibleToggle()" v-if="!isVisible">Add Task</button>
+</div>
     <form v-if="isVisible" @submit.prevent="submitData">
       <h2>Task Name:</h2>
       <input type="text" v-model="enteredName">
@@ -21,7 +23,7 @@ export default {
     return {
       isVisible: false,
       enteredName: '',
-      enteredEstPoms: 0
+      enteredEstPoms: 0,
       }
   },
   methods: {
